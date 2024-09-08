@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  helloworld:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-09-08T18:20:48.2015167+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 4878df884b0cefd76587177f9b01cc68979580187f024a1b1a5d0fc13b7df671
+    name: helloworld
+    type: application
+    urls:
+    - https://meghdo-cloud.github.io/helloworld/helloworld-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-09-08T18:20:48.2002914+01:00"
