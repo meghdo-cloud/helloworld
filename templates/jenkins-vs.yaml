@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: jenkins-vs
+  namespace: jenkins
+spec:
+  gateways:
+  - istio-system/meghdo-4567-ingress-gateway
+  hosts:
+  - jenkins.meghdo.cloud
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: {{ .Values.jenkinssvc }}
+        port:
+          number: 80
