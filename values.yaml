@@ -1,1 +1,2 @@
 app : helloworld
+jenkinssvc: helloworld.default.svc.cluster.local
