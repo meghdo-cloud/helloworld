@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: helloworld
+  namespace: default
+spec:
+  gateways:
+  - istio-system/meghdo-4567-ingress-gateway
+  hosts:
+  - meghdo.cloud
+  http:
+  - match:
+    - uri:
+        prefix: /hello-world
+    route:
+    - destination:
+        host: helloworld.default.svc.cluster.local
+        port:
+          number: 80
